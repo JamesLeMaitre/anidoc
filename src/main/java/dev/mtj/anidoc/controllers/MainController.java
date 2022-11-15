@@ -7,11 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MainController {
 
     @GetMapping("/")
-    public String home(){
-        return "pages/dashboard";
-    }
-
-    @GetMapping("/reference")
     public String reference(){
         return "pages/reference";
     }

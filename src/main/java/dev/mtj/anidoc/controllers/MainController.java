@@ -10,4 +10,9 @@ public class MainController {
     public String home(){
         return "pages/dashboard";
     }
+
+    @GetMapping("/reference")
+    public String reference(){
+        return "pages/reference";
+    }
 }

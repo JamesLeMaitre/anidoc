@@ -1,0 +1,51 @@
+<form method="post" th:fragment="form-fragment">
+  <div class="form-legend">
+    <div class=" line1 row mt-4 " id="line1">
+      <div class="col-md-3 col-sm-6">
+        <div class="input-group input-group-dynamic">
+          <select class="multisteps-form__input form-control dropdown" required name="customer_id" id="customer_id">
+            <option value="0" selected disabled>Selectionner le client<span class="text-danger">&nbsp;*</span></option>
+            <option th:each="customer:${customers}" th:text="${customer.user_name}"
+                    th:value="${customer.customerid}"></option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="input-group input-group-dynamic">
+          <select class="multisteps-form__input form-control dropdown" required name="article_id" id="article_id" >
+            <option value="0" selected disabled>Choisir l'article <span class="text-danger">&nbsp;*</span></option>
+            <option th:each="article:${articles}" th:text="${article.designation}"
+                    th:value="${article.idArticle}"></option>
+          </select>
+
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="input-group input-group-dynamic">
+          <label class="form-label">Quantité<span class="text-danger">&nbsp;*</span></label>
+          <input class="multisteps-form__input form-control" type="text" name="quantite" id="quantite" required/>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="input-group input-group-dynamic">
+          <select class="multisteps-form__input form-control" type="text" name="category" required
+                  id="category">
+            <option value="0" selected disabled>Choisir l'unité</option>
+            <option value="PIECE">PIECE</option>
+            <option value="PAQUET">PAQUET</option>
+            <option value="DOUZAINE">DOUZAINE</option>
+            <option value="QUART">QUART</option>
+            <option value="CARTON">CARTON</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-6"></div>
+    <div class="col-6 text-end ">
+      <button class="btn bg-gradient-dark mb-0 addDetailsFac" type="submit">
+        <i class="material-icons text-sm">add</i>&nbsp;save</button>
+    </div>
+  </div>
+</form>

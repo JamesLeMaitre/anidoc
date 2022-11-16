@@ -1,0 +1,75 @@
+<div th:fragment="document-reference">
+<div class="position-absolute d-flex top-0 w-100">
+  <p class="text-dark font-weight-normal p-3 mb-0">Document</p>
+  <div class="ms-auto p-3">
+
+  </div>
+</div>
+<div class="card-body">
+  <form action="">
+    <div class="row mt-4">
+      <div class="row col-md-4">
+        <div class="col-md-6">
+          <div class="input-group input-group-dynamic">
+            <select class="multisteps-form__input form-control" required name="civilite"
+                    id="civilite">
+              <option value="0" selected disabled>Choisir la civilité</option>
+              <option value="M">Mr</option>
+              <option value="F">Mme/Mlle</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="input-group input-group-dynamic">
+            <label class="form-label">Nom<span class="text-danger">&nbsp;*</span></label>
+            <input class="multisteps-form__input form-control" type="text" name="user_name"
+                   required  id="user_name" />
+          </div>
+        </div>
+      </div>
+      <div class="row col-md-4">
+        <div class="col-md-6">
+          <div class="input-group input-group-dynamic">
+            <label class="form-label">Prénom</label>
+            <input class="multisteps-form__input form-control" type="text" name="last_name"
+                   id="last_name" />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="input-group input-group-dynamic">
+            <label class="form-label">Addresse<span class="text-danger">&nbsp;*</span></label>
+            <input class="multisteps-form__input form-control" type="text" name="address"
+                   required  id="address" />
+          </div>
+        </div>
+      </div>
+      <div class="row col-md-4">
+        <div class="col-md-6">
+          <div class="input-group input-group-dynamic">
+            <label class="form-label">Email</label>
+            <input class="multisteps-form__input form-control" type="email" name="email"
+                   id="email" />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="input-group input-group-dynamic">
+            <label class="form-label">Telephone<span class="text-danger">&nbsp;*</span></label>
+            <input class="multisteps-form__input form-control" type="number" name="telcus" maxlength="8"
+                   required    id="telcus" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-6"></div>
+      <div class="col-6 text-end">
+        <button class="btn bg-gradient-dark mb-0 addCustomer" type="submit"><i
+                class="material-icons text-sm">add</i>&nbsp;&nbsp;Enregistrer le client</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+</div>
